@@ -61,16 +61,6 @@ void loop() {
     Serial.println("------------------------");
     Serial.println("Getting Current Time...");
 
-
-    // Serial.println("Sending Temperature and Time data");
-    // data[2] = now.month();
-    // data[3] = now.day();
-    // data[4] = now.year();
-    // data[5] = now.hour();
-    // data[6] = now.minute();
-    // data[7] = now.second();
-    // data[8] = now.dayOfTheWeek();
-
     bool success = radio.write(&data, sizeof(data));
 
     Serial.println("------------------------");
@@ -104,7 +94,7 @@ void initializeNRF24L01Radio() {
 
   Serial.println("Radio initialized successfully");
   radio.openWritingPipe(address);
-  radio.setPALevel(RF24_PA_LOW);
+  radio.setPALevel(RF24_PA_LOW, 0);
   radio.setDataRate(RF24_1MBPS);
   radio.stopListening();
 }

@@ -31,10 +31,11 @@ void setup() {
   
   Serial.println("Radio initialized successfully!");
   radio.openReadingPipe(0, address);
-  radio.setPALevel(RF24_PA_LOW);
+  radio.setPALevel(RF24_PA_LOW, 0);
   radio.setDataRate(RF24_1MBPS);
   radio.printDetails();
   radio.startListening();  // Start listening right away
+  lastReceiveTime = millis();
 }
 
 void loop() {
@@ -53,24 +54,6 @@ void loop() {
       Serial.print("Humidity: ");
       Serial.print(data[1]);
       Serial.println(" %");
-      /*
-      Serial.println("\n--------- RECEIVED TIME ---------");
-      Serial.print("MM: ");
-      Serial.print(data[2]);
-      Serial.print("dd: ");
-      Serial.print(data[3]);
-      Serial.print("YYYY: ");
-      Serial.print(data[4]);
-      Serial.print("HH: ");
-      Serial.print(data[5]);
-      Serial.print("MM: ");
-      Serial.print(data[6]);
-      Serial.print("SS: ");
-      Serial.print(data[7]);
-      Serial.print("Day of Week: ");
-      Serial.print(data[8]);
-      Serial.println("--------------------------------");
-      */
     }
   }
   
