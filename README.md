@@ -2,7 +2,6 @@
 
 Tinkering the following components:
 
-- [NRF24L01](https://github.com/nRF24/RF24/tree/master)
 - [RPI Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/)
 - [ESP32 Devkit v1](https://www.espressif.com/en/products/devkits)
 - [RTC DS3231](https://www.makerlab-electronics.com/products/ds3231-rtc-high-precision-real-time-clock-module?srsltid=AfmBOoo8SvmCNn5BWOvWejlR6Go2UPRrDRzZv-OZ2H1SBogYBUiQVOiF)
