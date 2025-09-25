@@ -11,11 +11,13 @@ Tinkering the following components:
 
 Goal is to have the following work:
 
+```
 +--------+       Radio (NRF24L01)         +--------+         WiFi           +---------------------+
 |  Pico  |------------------------------>| ESP32  |----------------------->| Java Server (Quarkus)|
 |        |                               |        |                        |      (MQTT Server)   |
 | DS3231 |                               |NRF24L01|                        +---------------------+
 | DHT22  |                               |        |
 +--------+                               +--------+
+```
 
 So far my ESP32 + NRF24L01 is having problems receiving from the Pico
